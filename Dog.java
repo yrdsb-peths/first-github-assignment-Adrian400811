@@ -1,13 +1,21 @@
-public class Dog{
-	private String name;
-	private int age;
+public class Dog extends Pet{
 
-	public Dog(String theName; int theAge){
-		name = theName;
-		age = theAge;
+	private String type;
+
+	public Dog(String name, int age, String theType){
+		super(name, age);
+		type = theType;
 	}
 
-	public toString(){
-		System.out.println(name+" is "+age+" years old.");
+	public String getName(){
+		return super.getName();
+	}
+
+	public int getAge(){
+		return super.getAge();
+	}
+
+	public String getType(){
+		return type;
 	}
 }
